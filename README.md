@@ -41,16 +41,16 @@ encoded/
 
 | Platform | Architecture | Download |
 |----------|-------------|---------|
-| **Windows** | x64 (64-bit) | [encoder-windows-x64.exe.zip](https://github.com/phpvault/ioncube_encoder/raw/refs/heads/main/encoders/encoder-windows-x64.exe.zip) |
-| **Windows** | x86 (32-bit) | [encoder-windows-x86.exe.zip](https://github.com/phpvault/ioncube_encoder/raw/refs/heads/main/encoders/encoder-windows-x86.exe.zip) |
-| **Windows** | ARM64 | [encoder-windows-arm64.exe.zip](https://github.com/phpvault/ioncube_encoder/raw/refs/heads/main/encoders/encoder-windows-arm64.exe.zip) |
-| **Linux** | x64 (64-bit) | [encoder-linux-x64.zip](https://github.com/phpvault/ioncube_encoder/raw/refs/heads/main/encoders/encoder-linux-x64.zip) |
-| **Linux** | x86 (32-bit) | [encoder-linux-x86.zip](https://github.com/phpvault/ioncube_encoder/raw/refs/heads/main/encoders/encoder-linux-x86.zip) |
+| **Windows** | amd64 (64-bit) | [encoder-windows-amd64.zip](https://github.com/phpvault/ioncube_encoder/raw/refs/heads/main/encoders/encoder-windows-amd64.zip) |
+| **Windows** | x86 (32-bit) | [encoder-windows-386.zip](https://github.com/phpvault/ioncube_encoder/raw/refs/heads/main/encoders/encoder-windows-386.zip) |
+| **Windows** | ARM64 | [encoder-windows-arm64.zip](https://github.com/phpvault/ioncube_encoder/raw/refs/heads/main/encoders/encoder-windows-arm64.zip) |
+| **Linux** | amd64 (64-bit) | [encoder-linux-amd64.zip](https://github.com/phpvault/ioncube_encoder/raw/refs/heads/main/encoders/encoder-linux-amd64.zip) |
+| **Linux** | x86 (32-bit) | [encoder-linux-386.zip](https://github.com/phpvault/ioncube_encoder/raw/refs/heads/main/encoders/encoder-linux-386.zip) |
 | **Linux** | ARM64 / aarch64 | [encoder-linux-arm64.zip](https://github.com/phpvault/ioncube_encoder/raw/refs/heads/main/encoders/encoder-linux-arm64.zip) |
 | **Linux** | ARM32 (ARMv7) | [encoder-linux-armv7.zip](https://github.com/phpvault/ioncube_encoder/raw/refs/heads/main/encoders/encoder-linux-armv7.zip) |
-| **macOS** | Intel (x64) | [encoder-macos-x64.zip](https://github.com/phpvault/ioncube_encoder/raw/refs/heads/main/encoders/encoder-macos-x64.zip) |
-| **macOS** | Apple Silicon (ARM64 M1/M2/M3/M4) | [encoder-macos-arm64.zip](https://github.com/phpvault/ioncube_encoder/raw/refs/heads/main/encoders/encoder-macos-arm64.zip) |
-| **FreeBSD** | x64 | [encoder-freebsd-x64.zip](https://github.com/phpvault/ioncube_encoder/raw/refs/heads/main/encoders/encoder-freebsd-x64.zip) |
+| **macOS** | Intel (amd64) | [encoder-darwin-amd64.zip](https://github.com/phpvault/ioncube_encoder/raw/refs/heads/main/encoders/encoder-darwin-amd64.zip) |
+| **macOS** | Apple Silicon (ARM64 M1/M2/M3/M4) | [encoder-darwin-arm64.zip](https://github.com/phpvault/ioncube_encoder/raw/refs/heads/main/encoders/encoder-darwin-arm64.zip) |
+| **FreeBSD** | amd64 | [encoder-freebsd-amd64.zip](https://github.com/phpvault/ioncube_encoder/raw/refs/heads/main/encoders/encoder-freebsd-amd64.zip) |
 
 ---
 
@@ -61,16 +61,16 @@ encoded/
 **Windows (PowerShell)**
 ```powershell
 # Download
-Invoke-WebRequest -Uri "https://github.com/phpvault/ioncube_encoder/raw/refs/heads/main/encoders/encoder-windows-x64.exe.zip" -OutFile encoder.zip
+Invoke-WebRequest -Uri "https://github.com/phpvault/ioncube_encoder/raw/refs/heads/main/encoders/encoder-windows-amd64.zip" -OutFile encoder.zip
 Expand-Archive encoder.zip .
 ```
 
 **Linux / macOS (bash)**
 ```bash
 # Download
-curl -L "https://github.com/phpvault/ioncube_encoder/raw/refs/heads/main/encoders/encoder-linux-x64.zip" -o encoder.zip
+curl -L "https://github.com/phpvault/ioncube_encoder/raw/refs/heads/main/encoders/encoder-linux-amd64.zip" -o encoder.zip
 unzip encoder.zip
-chmod +x encoder-linux-x64
+chmod +x encoder-linux-amd64
 ```
 
 ### Step 2 — Configure Key
@@ -96,7 +96,7 @@ Copy your PHP source scripts or whole project folders there — subdirectories a
 
 ```
 your-folder/
-├── encoder.exe        (or encoder-linux-x64, encoder-macos-arm64 …)
+├── encoder.exe        (or encoder-linux-amd64, encoder-macos-arm64 …)
 ├── source/
 │   └── your-files.php
 └── encoded/           ← encoded files generated here
